@@ -60,3 +60,20 @@ def func2(a):
     return a + x
 
 print('Local', func2(1))
+
+
+# Define Function 4
+print('\t가변인자함수 -----------------------------------------------------')
+
+def union(*ar):
+    result = []
+
+    for item in ar:
+        for x in item: 
+            if x not in result:
+                result.append(x)
+
+    return result
+
+print(union('ham', 'egg'))
+print(union('ham', 'egg', 'spam'))
