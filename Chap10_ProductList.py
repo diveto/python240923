@@ -32,17 +32,22 @@ class DemoForm(QMainWindow, form_class):
         self.tableWidget.setColumnWidth(0, 100)
         self.tableWidget.setColumnWidth(1, 200)
         self.tableWidget.setColumnWidth(2, 100)
+        
         #QTableWidget의 헤더 셋팅하기
         self.tableWidget.setHorizontalHeaderLabels(["제품ID","제품명", "가격"])
+        
         #QTableWidget의 컬럼 정렬하기 
         #self.tableWidget.horizontalHeaderItem(0).setTextAlignment(Qt.AlignRight)
         #self.tableWidget.horizontalHeaderItem(2).setTextAlignment(Qt.AlignRight)
+        
         #탭키로 네비게이션 금지 
         self.tableWidget.setTabKeyNavigation(False)
+
         #엔터키를 클릭하면 다음 컨트롤로 이동하는 경우 
         self.prodID.returnPressed.connect(lambda: self.focusNextChild())
         self.prodName.returnPressed.connect(lambda: self.focusNextChild())
         self.prodPrice.returnPressed.connect(lambda: self.focusNextChild())
+        
         #더블클릭 시그널 처리
         self.tableWidget.doubleClicked.connect(self.doubleClick)
 
