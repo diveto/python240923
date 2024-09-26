@@ -28,11 +28,7 @@ for post in posts:
     f.write(f'제목: {title}, 가격: {price}, 지역: {region}\n')
 
 f.close()
-    
-    
-
-
-
+     
 # <div class="card-desc">
 #       <h2 class="card-title">아이폰 14 128GB</h2>
 #       <div class="card-price ">
